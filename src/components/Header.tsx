@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faUser} from '@fortawesome/free-solid-svg-icons'
+import {faCartShopping} from '@fortawesome/free-solid-svg-icons'
 
 
 function Header() {
   return (
-    <div className='py-6 mb-6' style={{backgroundColor:'#5BA387'}}>
+    <div className='py-6 mb-6 bg-primary'>
       			<nav className="flex justify-between items-center w-[90%] max-w-screen-lg  mx-auto">
 				<div className="flex flex-row gap-8 items-center text-white ">
 					<Link href="/">
@@ -21,8 +21,8 @@ function Header() {
 					</li>
 					<li className="font-semibold">
 						<Link href="/publish">
-							<FontAwesomeIcon icon={faUser} className='pr-1'/>
-              Sign Up
+							<FontAwesomeIcon icon={faCartShopping} className='pr-1'/>
+              Cart
 						</Link>
 					</li>
 				</ul>
