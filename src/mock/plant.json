@@ -1,69 +1,69 @@
 [
 	{
-		"id": 1,
+		"id": "1",
 		"name": "Dot Lichen",
 		"price": 277,
 		"description": "Postimmunization arthropathy, unspecified hip",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/alocasia.png"
 	},
 	{
-		"id": 2,
+		"id": "2",
 		"name": "Suksdorf's Hawthorn",
 		"price": 99,
 		"description": "Malignant neoplasm of vertebral column",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/anthurium.png"
 	},
 	{
-		"id": 3,
+		"id": "3",
 		"name": "Lemmon's Brickellbush",
 		"price": 370,
 		"description": "Vitreous abscess (chronic), unspecified eye",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/cordyline.png"
 	},
 	{
-		"id": 4,
+		"id": "4",
 		"name": "Marula",
 		"price": 86,
 		"description": "Other coma, without Glasgow, or w/part score, 24+hrs",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/croton.png"
 	},
 	{
-		"id": 5,
+		"id": "5",
 		"name": "Rim Lichen",
 		"price": 637,
 		"description": "Oth injury due to oth accident on board pasngr ship, sequela",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/dracaena.png"
 	},
 	{
-		"id": 6,
+		"id": "6",
 		"name": "Wright's Beardtongue",
 		"price": 405,
 		"description": "Unspecified fracture of lower end of femur",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/hoya.png"
 	},
 	{
-		"id": 7,
+		"id": "7",
 		"name": "Ohio Polytrichum Moss",
 		"price": 569,
 		"description": "Postproc hemor of right eye and adnexa fol an opth procedure",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/portodora.png"
 	},
 	{
-		"id": 8,
+		"id": "8",
 		"name": "Abrams' Allium",
 		"price": 288,
 		"description": "Other injury of inferior mesenteric artery",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/scindapsus.png"
 	},
 	{
-		"id": 9,
+		"id": "9",
 		"name": "Thompson's Waterleaf",
 		"price": 794,
 		"description": "Corrosion of unsp degree of unspecified lower leg, sequela",
 		"img": "https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/yucca.png"
 	},
 	{
-		"id": 10,
+		"id": "10",
 		"name": "Compressed Entodon Moss",
 		"price": 86,
 		"description": "Torus fracture of lower end of unspecified radius",
