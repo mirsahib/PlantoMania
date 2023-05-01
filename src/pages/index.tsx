@@ -41,7 +41,7 @@ export default function Home({
 												<p className="mb-2">
 													$ {plant.price}
 												</p>
-												<button className="p-3 text-white bg-primary rounded">
+												<button className="p-3 text-white bg-primary hover:bg-[#3b8167] rounded">
 													Add To Cart
 													<FontAwesomeIcon
 														icon={faCartPlus}
