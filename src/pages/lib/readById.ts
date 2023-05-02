@@ -2,17 +2,9 @@ import fsPromises from 'fs/promises';
 import { GetStaticProps,GetStaticPaths, GetStaticPropsContext } from 'next';
 import path from 'path'
 import { ParsedUrlQuery } from 'querystring';
-
+import { IPlant } from '@/types';
 interface IParams extends ParsedUrlQuery{
     plantslug:string
-}
-
-interface IPlant{
-    id:string,
-    name:string,
-    price:number,
-    description:string,
-    img:string
 }
 
 const getStaticPaths:GetStaticPaths = async () => {

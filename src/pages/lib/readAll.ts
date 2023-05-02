@@ -1,13 +1,6 @@
 import fsPromises from 'fs/promises';
 import path from 'path'
-
-interface IPlant{
-    id:string,
-    name:string,
-    price:number,
-    description:string,
-    img:string
-}
+import { IPlant } from '@/types';
 
 export async function getStaticProps() {
     const filePath = path.join(process.cwd(), './src/mock/plant.json');
