@@ -11,16 +11,10 @@ config.autoAddCss = false;
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<>
-			<Provider store={store}>
-				<Layout>
-					<Component {...pageProps} />
-				</Layout>
-			</Provider>
-			<Script
-				src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"
-				strategy="beforeInteractive"
-			/>
-		</>
+		<Provider store={store}>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</Provider>
 	);
 }
