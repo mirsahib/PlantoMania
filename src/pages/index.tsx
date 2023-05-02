@@ -7,6 +7,9 @@ import Head from "next/head";
 import { useAppDispatch } from "@/store";
 import { IPlant } from "@/types";
 import { addToCart } from "@/store/cart";
+import Image from "next/image";
+
+  
 
 export default function Home({
 	plants,
@@ -35,9 +38,11 @@ export default function Home({
 										<div className="flex flex-col justify-between m-4 h-1/4">
 											<Link href={`plants/${plant.id}`}>
 												<div className="flex bg-white p-4 justify-center mb-2">
-													<img
+													<Image
 														className="scale-50 hover:scale-75 ease-in duration-500"
 														src={plant.img}
+														width={200}
+														height={250}
 														alt=""
 													/>
 												</div>

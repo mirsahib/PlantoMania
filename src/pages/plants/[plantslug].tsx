@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { getStaticProps } from "../lib/readById";
 import { InferGetStaticPropsType } from "next";
+import Image from "next/image";
 
 export default function singlePlant({plant}:InferGetStaticPropsType<typeof getStaticProps>) {
 	return (
@@ -17,7 +18,7 @@ export default function singlePlant({plant}:InferGetStaticPropsType<typeof getSt
 						{/* main container */}
 						<div className="flex basis-2/4 h-[600px] bg-white justify-center items-center">
 							{/* image container */}
-							<img
+							<Image
                                 className="h-[60%] scale-50 hover:scale-75 ease-in duration-500"
 								src={plant.img}
 								alt=""
