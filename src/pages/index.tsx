@@ -1,5 +1,5 @@
 import { InferGetStaticPropsType } from "next";
-import { getStaticProps } from "./lib/readAll";
+import { getStaticProps } from "../lib/readAll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
@@ -74,4 +74,4 @@ export default function Home({
 		</>
 	);
 }
-export { getStaticProps } from "./lib/readAll";
+export { getStaticProps } from "../lib/readAll";

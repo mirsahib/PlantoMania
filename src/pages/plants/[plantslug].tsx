@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
-import { getStaticProps } from "../lib/readById";
+import { getStaticProps } from "../../lib/readById";
 import { InferGetStaticPropsType } from "next";
 import Image from "next/image";
 
@@ -48,4 +48,4 @@ export default function singlePlant({plant}:InferGetStaticPropsType<typeof getSt
 	);
 }
 
-export {getStaticProps,getStaticPaths} from '../lib/readById'
+export {getStaticProps,getStaticPaths} from '../../lib/readById'
