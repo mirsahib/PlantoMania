@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
-import Cart from "../modules/cart/Cart";
+import Cart from "@/modules/cart/Cart";
 
 function Header() {
 	return (
@@ -27,7 +27,7 @@ function Header() {
 					<li>
 						<button
 							// onClick={()=>{console.log("click")}}
-							className="font-semibold"
+							className="font-semibold text-yellow-200"
 							type="button"
 							data-drawer-target="drawer-right-example"
 							data-drawer-show="drawer-right-example"
@@ -36,7 +36,8 @@ function Header() {
 						>
 							<FontAwesomeIcon
 								icon={faCartShopping}
-								className="pr-1"
+								className="pr-1 text-white"
+								
 							/>
 							Cart
 						</button>
