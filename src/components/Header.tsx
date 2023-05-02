@@ -16,17 +16,8 @@ function Header() {
 					</Link>
 				</div>
 				<ul className="flex gap-8 text-white">
-					<li className="font-semibold">
-						<Link href={"/"}>
-							<i
-								className="fa fa-user mr-1"
-								aria-hidden="true"
-							></i>
-						</Link>
-					</li>
 					<li>
 						<button
-							// onClick={()=>{console.log("click")}}
 							className="font-semibold text-yellow-200"
 							type="button"
 							data-drawer-target="drawer-right-example"
