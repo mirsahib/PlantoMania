@@ -28,10 +28,10 @@ export default function singlePlant({plant}:InferGetStaticPropsType<typeof getSt
 						</div>
 						<div className="flex flex-col items-start justify-center basis-1/2 mx-5">
 							{/* plant container */}
-							<h3 className="font-semibold text-3xl mb-3">{plant.name}</h3>
-							<h3 className=" text-2xl">$ {plant.price}</h3>
+							<h3 className="font-semibold text-3xl mb-3">{plant?.name}</h3>
+							<h3 className=" text-2xl">$ {plant?.price}</h3>
 							<p className="my-3">
-                                {plant.description}
+                                {plant?.description}
 							</p>
 							<button className="p-3 text-white bg-primary rounded">
 								Add To Cart
