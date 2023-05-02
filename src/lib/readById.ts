@@ -24,7 +24,7 @@ const getStaticProps:GetStaticProps =  async (context)=> {
     const jsonData = await fsPromises.readFile(filePath,'utf-8');
     const plants:IPlant[] = JSON.parse(jsonData);
     const {plantslug} = context.params as IParams
-    const plant = plants.find(item=>{
+    const plant:IPlant|undefined = plants.find(item=>{
         return item.id === plantslug
     })
     if(!plant){

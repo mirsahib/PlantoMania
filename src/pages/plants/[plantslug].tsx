@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
-import { getStaticProps } from "../../lib/readById";
+import { getStaticProps } from "@/lib/readById";
 import { InferGetStaticPropsType } from "next";
 import Image from "next/image";
 
@@ -20,7 +20,7 @@ export default function singlePlant({plant}:InferGetStaticPropsType<typeof getSt
 							{/* image container */}
 							<Image
                                 className="h-[60%] scale-50 hover:scale-75 ease-in duration-500"
-								src={plant.img}
+								src={plant && plant.img!==null ?plant.img:''}
 								width={200}
 								height={250}
 								alt=""
