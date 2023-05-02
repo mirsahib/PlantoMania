@@ -21,6 +21,8 @@ export default function singlePlant({plant}:InferGetStaticPropsType<typeof getSt
 							<Image
                                 className="h-[60%] scale-50 hover:scale-75 ease-in duration-500"
 								src={plant.img}
+								width={200}
+								height={250}
 								alt=""
 							/>
 						</div>
