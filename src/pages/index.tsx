@@ -4,10 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Head from "next/head";
+import { useAppDispatch } from "@/store";
+import { IPlant } from "@/types";
+import { addToCart } from "@/store/cart";
 
 export default function Home({
 	plants,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+
+	const dispatch = useAppDispatch()
+	const handleAddToCart = (data:IPlant)=>{
+		dispatch(addToCart(data))
+	}
+	
 	return (
 		<>
     <Head>
@@ -41,7 +50,7 @@ export default function Home({
 												<p className="mb-2">
 													$ {plant.price}
 												</p>
-												<button className="p-3 text-white bg-primary hover:bg-[#3b8167] rounded">
+												<button onClick={()=>handleAddToCart(plant)} className="p-3 text-white bg-primary hover:bg-[#3b8167] rounded">
 													Add To Cart
 													<FontAwesomeIcon
 														icon={faCartPlus}
