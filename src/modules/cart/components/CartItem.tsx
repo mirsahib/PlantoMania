@@ -8,6 +8,7 @@ import {
 	removeFromCart,
 } from "@/store/cart";
 import { useAppDispatch } from "@/store";
+import Image from "next/image";
 
 type ICart = InitialStateType["itemList"][0];
 
@@ -35,7 +36,7 @@ export default function CartItem({ product, count, productPrice }: ICart) {
 			<div className="flex flex-row items-center justify-between mb-2">
 				<div className="flex flex-row  items-center">
 					<div className="w-[12%] mr-5">
-						<img src={product?.img} alt="" />
+						<Image src={product?.img} width={200} height={200} alt="" />
 					</div>
 					<h3 className="font-medium text-gray-900 text-lg">
 						{product?.name}
