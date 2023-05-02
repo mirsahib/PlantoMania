@@ -1,6 +1,6 @@
 import { createSlice, current, PayloadAction } from '@reduxjs/toolkit';
 import { IPlant } from '@/types';
-type InitialStateType = {
+export interface InitialStateType {
     itemList: Array<{
         product: IPlant | null;
         count: number;
@@ -82,6 +82,7 @@ const cartSlice = createSlice({
                 }
             }
             state.totalPrice = state.totalPrice + newItem.price;
+            console.log('increase',current(state))
         },
         decreaseCart(state, action: PayloadAction<IPlant>) {
             const newItem = action.payload;
@@ -95,6 +96,7 @@ const cartSlice = createSlice({
                 if (productIndex != -1) {
                     if (state.itemList[productIndex].count == 1) {
                         state.itemList.splice(productIndex, 1);
+                        state.totalItem = state.totalItem - 1;
                     } else {
                         const stateProduct = state.itemList[productIndex];
                         stateProduct.count = stateProduct.count - 1;
@@ -103,9 +105,10 @@ const cartSlice = createSlice({
                         state.itemList[productIndex] = stateProduct;
                     }
                     state.totalPrice = state.totalPrice - newItem.price;
-                    state.totalItem = state.totalItem - 1;
+                    // state.totalItem = state.totalItem - 1;
                 }
             }
+            console.log('decrease',current(state))
         },
         removeFromCart(state, action: PayloadAction<IPlant>) {
             const newItem = action.payload;
