@@ -5,8 +5,10 @@ import {
 	faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import Cart from "@/modules/cart/Cart";
+import { useAppSelector } from "@/store";
 
 function Header() {
+	const totalItem = useAppSelector(state=>state.cartStore.totalItem)
 	return (
 		<div className="py-6 mb-6 bg-primary">
 			<nav className="flex justify-between items-center w-[90%] max-w-screen-lg  mx-auto">
@@ -18,7 +20,7 @@ function Header() {
 				<ul className="flex gap-8 text-white">
 					<li>
 						<button
-							className="font-semibold text-yellow-200"
+							className="font-semibold"
 							type="button"
 							data-drawer-target="drawer-right-example"
 							data-drawer-show="drawer-right-example"
@@ -30,7 +32,7 @@ function Header() {
 								className="pr-1 text-white"
 								
 							/>
-							Cart
+							Cart {totalItem}
 						</button>
 						<Cart/>
 					</li>

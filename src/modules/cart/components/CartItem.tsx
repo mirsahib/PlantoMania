@@ -1,27 +1,50 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import {
-	faTrash,
-	faPlus,
-	faMinus,
-} from "@fortawesome/free-solid-svg-icons";
+	InitialStateType,
+	decreaseCart,
+	increaseCart,
+	removeFromCart,
+} from "@/store/cart";
+import { useAppDispatch } from "@/store";
 
-export default function CartItem() {
+type ICart = InitialStateType["itemList"][0];
+
+export default function CartItem({ product, count, productPrice }: ICart) {
+	const dispatch = useAppDispatch();
+
+	const increaseItem = () => {
+		if (product) {
+			dispatch(increaseCart(product));
+		}
+	};
+	const decreaseItem = () => {
+		if (product) {
+			dispatch(decreaseCart(product));
+		}
+	};
+	const deleteItem = () => {
+		if(product){
+			dispatch(removeFromCart(product));
+		}
+	};
+
 	return (
 		<li className="flex flex-col p-4 ">
 			<div className="flex flex-row items-center justify-between mb-2">
 				<div className="flex flex-row  items-center">
 					<div className="w-[12%] mr-5">
-						<img
-							src="https://raw.githubusercontent.com/olawanlejoel/nextjs-ecommerce-graphcms/main/public/images/alocasia.png"
-							alt=""
-						/>
+						<img src={product?.img} alt="" />
 					</div>
 					<h3 className="font-medium text-gray-900 text-lg">
-						Dracana flowbite
+						{product?.name}
 					</h3>
 				</div>
-				<button className="text-red-400  hover:text-red-300">
+				<button
+					onClick={() => deleteItem()}
+					className="text-red-400  hover:text-red-300"
+				>
 					<FontAwesomeIcon
 						icon={faTrash}
 						className="bg-red-200 rounded-full p-2"
@@ -31,24 +54,30 @@ export default function CartItem() {
 			<h5 className="text-gray-700 text-xs mb-3">Quantity</h5>
 			<div className="flex justify-between items-center ">
 				<div className="flex basis-1/3 justify-between item-center  p-3 border border-slate-300 text-gray-900">
-					<button className="text-blue-700">
+					<button
+						onClick={() => decreaseItem()}
+						className="text-blue-700"
+					>
 						<FontAwesomeIcon
-							icon={faPlus}
+							icon={faMinus}
 							size="sm"
 							className=" bg-blue-100  rounded-full p-1"
 						/>
 					</button>
-					<p>1</p>
-					<button className="text-blue-700 ">
+					<p>{count}</p>
+					<button
+						onClick={() => increaseItem()}
+						className="text-blue-700 "
+					>
 						<FontAwesomeIcon
-							icon={faMinus}
+							icon={faPlus}
 							size="sm"
 							className=" bg-blue-100 rounded-full p-1"
 						/>
 					</button>
 				</div>
 				<div className="flex justify-end basis-[67.7%]">
-					<h4 className="text-gray-900 text-sm">$ 22.90</h4>
+					<h4 className="text-gray-900 text-sm">${productPrice}</h4>
 				</div>
 			</div>
 			<hr className="h-px mt-8 bg-gray-200 border-0 dark:bg-gray-700" />
