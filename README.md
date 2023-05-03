@@ -1,38 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Plantomania Shopping Cart App
 
-## Getting Started
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmirsahib%2FPlantoMania)
 
-First, run the development server:
+[Demo](https://planto-mania.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Plantomania is an e-commerce shopping cart application that allows users to purchase plant products online. The app is built on Next.js version 13 and is deployed on Vercel.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- View product details and images
+- Add products to the cart
+- Adjust product quantity in the cart
+- Remove products from the cart
+- Checkout and make payment
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Installation and Usage
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+To run the app locally, follow these steps:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clone the repository: `git clone https://github.com/mirsahib/PlantoMania.git`
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+4. Open http://localhost:3000 in your browser
 
-## Learn More
+To deploy the app on Vercel, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Create an account on Vercel
+2. Connect your GitHub repository to Vercel
+3. Configure your deployment settings (environment variables, custom domains, etc.)
+4. Deploy your app
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technology Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Next.js
+- React
+- Tailwind css
+## Contributing
 
-## Deploy on Vercel
+Contributions to Plantomania are welcome! If you find a bug or have a feature request, please open an issue on GitHub. If you would like to contribute code, please create a pull request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Plantomania is released under the MIT License. See LICENSE file for more details.
